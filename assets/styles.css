@@ -1,0 +1,52 @@
+body{
+    margin:0;
+    padding:0;  /*this gets rid of the default padding and margins in Chrome*/
+    font-size: 10px;
+    font-family: sans-serif;
+}
+
+.navbar{
+    background-color: #ccc;
+    min-height: 5rem;    /*this is 50px wide*/
+    font-size: 1.8rem;   /*this is 18px*/
+}
+ul, li{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+li{
+    float: left;
+    display: inline;
+    background-color: #666;
+    width: 33.3%; /*because there are 3 of them so this places them at 1/3*/
+    line-height: 2.7;
+}
+ul:after{   /*sometimes uses :: but not all browsers recognize it*/
+    /*need to do this to identify the ul because we are using a float*/
+    content: "";
+    clear: both;
+    height: 0;
+    width: 0;
+    display: block;
+}
+a {
+    display: block;
+    background-color: #4e458b;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color .5s ease,
+                color .25s ease,
+                box-shadow .5s ease,
+                transform .5s ease;
+
+    box-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+
+a:hover{
+    background-color: #ccc;
+    color: #000;
+    transform: translateY(5px) translateX(3px);
+    box-shadow: 0 3px 4px rgba(0,0,0,0.5);
+}
